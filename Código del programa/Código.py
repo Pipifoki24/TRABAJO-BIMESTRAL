@@ -11,10 +11,12 @@ matriz_rigidez = np.array([[2.0, -1.0], [-1.0, 2.0]])
 vector_fuerzas = np.array([0.0, carga_centro])
 
 # Resolución del sistema de ecuaciones lineales para obtener las reacciones en los puntos de apoyo
-reacciones = np.linalg.solve(matriz_rigidez, vector_fuerzas) #np.linalg.solve lo que hace es que calcula su inversa.
+reacciones = np.linalg.solve(matriz_rigidez, vector_fuerzas)
+ #np.linalg.solve lo que hace es que calcula su inversa.
 
 # Cálculo de las fuerzas internas en la viga
-fuerzas_internas = np.dot(matriz_rigidez, reacciones) #np.dot lo que hace es que los arrays que se van a multiplicar.
+fuerzas_internas = np.dot(matriz_rigidez, reacciones) 
+#np.dot lo que hace es que los arrays que se van a multiplicar.
 
 # Impresión de los resultados
 print("Reacciones en los puntos de apoyo:")
